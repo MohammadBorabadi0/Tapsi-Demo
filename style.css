@@ -91,13 +91,16 @@ html {
 .block {
   padding: 4rem 2rem;
 }
+
 @media screen and (min-width: 768px) {
   .block {
     padding: 6rem 2rem;
   }
 }
+
 .block-heading {
-  margin-top: 6rem;
+  margin: 6rem 0;
+  font-size: 3rem;
 }
 
 /* Navbar */
@@ -267,5 +270,115 @@ html {
   }
   .hero-section .body__buttons {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Services  */
+
+.services {
+  margin-top: 20rem;
+}
+
+.services h2 {
+  font-size: 3rem;
+}
+
+.services__tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+.services__tabs .tab {
+  color: #222;
+  opacity: 0.5;
+  max-width: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.tab:hover {
+  opacity: 1;
+}
+
+.tab.active {
+  opacity: 1;
+}
+
+.tab p {
+  font-size: 1.2rem;
+}
+
+.tab img {
+  max-width: 85px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-top: 4rem;
+  flex: 1;
+}
+
+.content-container h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.content-container p {
+  text-align: justify;
+}
+
+.tab-pane {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  display: none;
+  padding-top: 2rem;
+}
+
+.tab-pane.active {
+  display: flex;
+}
+
+.tab-pane .description {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.service__image {
+  display: none;
+  order: 2;
+  flex: 1;
+  padding-top: 2rem;
+}
+
+.service__image img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .service__image {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tab {
+    max-width: 200px;
+  }
+  .tap p {
+    font-size: 1.4rem;
+  }
+  .tab img {
+    width: 100%;
   }
 }
