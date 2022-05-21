@@ -41,6 +41,81 @@
         </nav>
       </div>
     </header>
+    <!-- Hero Section  -->
+    <section class="hero-section">
+      <div class="hero-section__image">
+        <picture>
+          <source
+            srcset="https://tapsi.ir/images/home/banner.webp"
+            type="image/webp"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="https://tapsi.ir/images/home/banner.jpg"
+            type="image/jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="https://tapsi.ir/images/home/banner-mobile.webp"
+            type="image/webp"
+            media="(max-width: 768px)"
+          />
+          <source
+            srcset="https://tapsi.ir/images/home/banner-mobile.jpg"
+            type="image/jpg"
+            media="(max-width: 768px)"
+          />
+          <img
+            alt="banner"
+            src="https://tapsi.ir/images/home/banner.jpg"
+            class="banner-img"
+          />
+        </picture>
+      </div>
+      <div class="hero-section__content container">
+        <div class="hero-section__body">
+          <div class="body">
+            <h1>تپسی</h1>
+            <h2>اپلیکیشن درخواست خودرو و پیک</h2>
+            <div class="body__buttons">
+              <div class="body__button">
+                <button class="btn btn-light btn-block">
+                  دانلود اپلیکیشن مسافران
+                </button>
+              </div>
+              <div class="body__button">
+                <button class="btn btn-light btn-block">
+                  وب اپلیکیشن مسافران
+                </button>
+              </div>
+              <div class="body__button">
+                <button class="btn btn-dark btn-block">
+                  دانلود اپلیکیشن رانندگان
+                </button>
+              </div>
+              <div class="body__button">
+                <button class="btn btn-dark btn-block">ثبت نام راننده</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-section__banner">
+          <picture>
+            <source
+              srcset="https://tapsi.ir/images/home/mockup-phone.webp"
+              type="image/webp"
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="https://tapsi.ir/images/home/mockup-phone.png"
+              type="image/png"
+              media="(min-width: 1024px)"
+            />
+            <img alt="phone" class="banner-phone" aria-label="banner phone" />
+          </picture>
+        </div>
+      </div>
+    </section>
     <script src="./main.js"></script>
   </body>
 </html>
