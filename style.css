@@ -28,9 +28,10 @@ html {
   font-size: 62.5%;
 }
 
-body {
+p {
   color: var(--color-body);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 2;
 }
 
 .container {
@@ -656,6 +657,73 @@ input[type="radio"]:checked + label::before {
 
 input[type="radio"] {
   display: none;
+}
+
+/* Accordion  */
+
+.accordion {
+  width: 100%;
+  margin: 2rem 0;
+  border: 1px solid #222;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.accordion__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #f6f6f6;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.accordion__button button {
+  background-color: transparent;
+  color: var(--color-headings);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.accordion__button span {
+  background-color: rgb(247, 63, 8);
+  padding: 1rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.accordion__button.active {
+  background-color: #e0dddd;
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  padding: 0 2rem;
+}
+
+.accordion__content.active {
+  max-height: fit-content;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #ccc;
+  animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Badge  */
