@@ -40,7 +40,14 @@ accordionTilte.forEach((item, index) => {
   item.addEventListener("click", () => {
     item.classList.toggle("active");
     accordionContent[index].classList.toggle("active");
-    accordionIcons[index].classList.replace("fa-plus", "fa-minus");
+
+    accordionIcons.forEach((item) => {
+      if (item.classList.contains("fa-plus")) {
+        item.classList.replace("fa-plus", "fa-minus");
+      } else {
+        item.classList.replace("fa-minus", "fa-plus");
+      }
+    });
 
     accordionContent.forEach((content, contentIndex) => {
       if (contentIndex !== index) {
@@ -52,4 +59,4 @@ accordionTilte.forEach((item, index) => {
   });
 });
 
-// End Accordion 
+// End Accordion
