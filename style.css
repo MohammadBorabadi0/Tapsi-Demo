@@ -629,7 +629,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
   cursor: pointer;
   width: 100%;
   border: 2px solid #ccc;
@@ -665,6 +665,12 @@ input[type="radio"] {
   display: none;
 }
 
+@media (min-width: 1024px) {
+  .selectRadio label {
+    font-size: 2rem;
+  }
+}
+
 /* Accordion  */
 
 .accordion {
@@ -688,7 +694,7 @@ input[type="radio"] {
 .accordion__button button {
   background-color: transparent;
   color: var(--color-headings);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
@@ -700,7 +706,7 @@ input[type="radio"] {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .accordion__button.active {
@@ -712,6 +718,10 @@ input[type="radio"] {
   overflow: hidden;
   transition: all 0.5s linear;
   padding: 0 2rem;
+}
+
+.accordion__content p{
+  font-size: 1.2rem;
 }
 
 .accordion__content.active {
@@ -729,6 +739,18 @@ input[type="radio"] {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .accordion__button button {
+    font-size: 2rem;
+  }
+  .accordion__button span {
+    font-size: 2rem;
+  }
+  .accordion__content p{
+    font-size: 1.4rem;
   }
 }
 
@@ -764,6 +786,7 @@ input[type="radio"] {
 
 .icon-holder span {
   color: var(--color-body);
+  font-size: 1.4rem;
 }
 
 .icon-holder i {
@@ -804,8 +827,10 @@ input[type="radio"] {
   color: var(--color-primary);
 }
 
-.fa-facebook:hover {
-  color: rgb(7, 59, 230);
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover {
+  color: rgb(8, 8, 245);
 }
 
 .fa-telegram:hover {
@@ -876,7 +901,7 @@ input:focus {
 @media (min-width: 1024px) {
   .contact-us .left-col {
     flex: 3;
-    gap: 2rem;
+    gap: 3rem;
     flex-direction: column;
   }
   .contact-us__map {
@@ -893,10 +918,90 @@ input:focus {
   }
   .contact-us__address .icon-holder {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
-  .icon-holder span {
-    font-size: 1.4rem;
+}
+
+/* Footer  */
+
+.footer {
+  background-color: var(--color-headings);
+  color: var(--color-white);
+  padding: 4rem 0;
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__item .icons {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.footer__item svg {
+  cursor: pointer;
+}
+
+.footer__item.enemad {
+  flex-direction: row;
+}
+
+.footer__item.social {
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__item img {
+  display: inline-block;
+  width: 15rem;
+  margin-bottom: 3rem;
+}
+
+.footer__item span {
+  margin-right: 0.5rem 0;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.footer__item .enemad__img {
+  width: 10rem;
+}
+
+.footer__item.enemad img {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.footer__item h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.footer__item a {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.footer__item a:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .main-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
